@@ -1,0 +1,9 @@
+.expensesList {
+    list-style: none;
+    padding: 0;
+}
+
+.noResultInfo {
+    color: #ffffff;
+    text-align: center;
+}

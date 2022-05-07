@@ -3,6 +3,7 @@ import ExpenseItem from './ExpenseItem';
 import Card from '../UI/Card';
 import './Expenses.css';
 import ExpensesFilter from "./ExpensesFilter";
+import ExpensesList from "./ExpensesList";
 
 function Expenses({items}) {
 
@@ -21,11 +22,7 @@ function Expenses({items}) {
     return (
         <Card className="expenses">
             <ExpensesFilter selected={filteredYear} onChangeFilter={filterChangeHandler}/>
-            {filteredExpenses.map(item => {
-                return (
-                    <ExpenseItem key={item.id} amount={item?.amount} date={item?.date} title={item?.title}/>
-                )
-            })}
+            <ExpensesList expenses={filteredExpenses}/>
         </Card>
     );
 }
