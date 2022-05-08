@@ -3,7 +3,7 @@ import ExpenseItem from "./ExpenseItem";
 import './ExpensesList.css'
 
 const ExpensesList = ({expenses}) => {
-    
+
     if (!expenses.length) {
         return (
             <h2 className='noResultInfo'>No expenses found</h2>
